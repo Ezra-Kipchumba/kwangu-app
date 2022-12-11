@@ -42,83 +42,88 @@ function Register() {
   }
   return (
     <div className="forms-page" id="grey">
-      <form className="forms" onSubmit={handleSubmit}>
-        <br></br>
-        <h2 className="title">Register</h2>
-        <br></br>
-        <br></br>
-        <div className="form">
-          <div className="inputfield">
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="form-group form-control"
-              placeholder="Name"
-            />
-          </div>
-          <div className="inputfield">
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="form-group form-control"
-              placeholder="Username"
-            />
-          </div>
-
-          <div className="inputfield">
-            <input
-              type="text"
-              value={contact}
-              onChange={(e) => setContact(e.target.value)}
-              className="form-group form-control"
-              placeholder="Contacts"
-            />
-          </div>
-
-          <small id="emailHelp" class="form-text text-muted">
-            Password must be at least 8 characters
-          </small>
-
-          <div className="inputfield">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-group form-control"
-              placeholder="Password"
-            />
-          </div>
-          <div className="inputfield">
-            <input
-              type="password"
-              value={passwordconfirmation}
-              onChange={(e) => setPasswordConfirmation(e.target.value)}
-              className="form-group form-control"
-              placeholder="Confirm Password"
-            />
-          </div>
-
-          <br></br>
-          <div className="inputfield terms">
-            <label className="check">
-              <input type="checkbox" />
-              <span className="checkmark"></span>
-            </label>
-            <p>Agreed to terms and conditions</p>
-          </div>
-          <button className="btn btn-primary" type="submit">
-            Register
-          </button>
-          {error.map((er) => (
-            <h5 key={er} className="err">
-              {er}!
-            </h5>
-          ))}
-        </div>
-      </form>
       <br />
+      <br />
+      <div className="card" style={{ width: "48rem" }} id="loginbox">
+        <form className="forms" onSubmit={handleSubmit}>
+          <br></br>
+          <h2 className="title">Register</h2>
+          <br></br>
+          <br></br>
+          <div className="form">
+            <div className="inputfield">
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="form-group form-control"
+                placeholder="Name"
+              />
+            </div>
+            <div className="inputfield">
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="form-group form-control"
+                placeholder="Username"
+              />
+            </div>
+
+            <div className="inputfield">
+              <input
+                type="text"
+                value={contact}
+                onChange={(e) => setContact(e.target.value)}
+                className="form-group form-control"
+                placeholder="Contacts"
+              />
+            </div>
+
+            <small id="emailHelp" class="form-text text-muted">
+              Password must be at least 8 characters
+            </small>
+
+            <div className="inputfield">
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="form-group form-control"
+                placeholder="Password"
+              />
+            </div>
+            <div className="inputfield">
+              <input
+                type="password"
+                value={passwordconfirmation}
+                onChange={(e) => setPasswordConfirmation(e.target.value)}
+                className="form-group form-control"
+                placeholder="Confirm Password"
+              />
+            </div>
+
+            <br></br>
+            <div className="inputfield terms">
+              <label className="check">
+                <input type="checkbox" />
+                <span className="checkmark"></span>
+              </label>
+              <p>Agreed to terms and conditions</p>
+            </div>
+            <button className="btn btn-primary" type="submit">
+              Register
+            </button>
+            {error.map((er) => (
+              <h5 key={er} className="err">
+                {er}!
+              </h5>
+            ))}
+            <br />
+            <br />
+          </div>
+        </form>
+      </div>
       <br />
       <br />
       <br />
