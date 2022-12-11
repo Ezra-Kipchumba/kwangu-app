@@ -10,7 +10,7 @@ function AddtoHomes() {
   const [no_of_bedrooms, setBeds] = useState("");
   const [no_of_bathrooms, setBaths] = useState("");
   const [user_id, setUser_id] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
 
 
@@ -154,11 +154,11 @@ function AddtoHomes() {
         <button type="submit" className="btn btn-warning">
           Sell
         </button>
-        {/* {error.map((er) => (
+        {error.map((er) => (
           <h5 key={er} className="err">
             {er}!
           </h5>
-        ))} */}
+        ))}
       </form>
       <br />
       <br />
